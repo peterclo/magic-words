@@ -1,0 +1,18 @@
+mutation {
+  createWeek(data: { Week: 2, days: ["1 (=id 1)", "2"] }) {
+    data {
+      id
+      attributes {
+        Week
+        days {
+          data {
+            id
+            attributes {
+              Day
+            }
+          }
+        }
+      }
+    }
+  }
+}

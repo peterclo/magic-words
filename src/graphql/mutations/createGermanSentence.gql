@@ -1,0 +1,10 @@
+mutation {
+  createSentence(data: { Sentence: "Nouvelle phrase en allemand" }) {
+    data {
+      id
+      attributes {
+        Sentence
+      }
+    }
+  }
+}

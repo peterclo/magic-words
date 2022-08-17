@@ -1,0 +1,55 @@
+mutation ($input:GermanWordInput!) {
+  createGermanWord(
+    data: $input
+  ) {
+    data {
+      id
+      attributes {
+        Word
+        day {
+          data {
+            id
+            attributes {
+              Day
+            }
+          }
+        }
+        germansentences {
+          data {
+            id
+            attributes {
+              Sentence
+            }
+          }
+        }
+        englishsentences {
+          data {
+            id
+            attributes {
+              Sentence
+            }
+          }
+        }
+        french_word {
+          data {
+            id
+            attributes {
+              Translation
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+Query variables :
+{
+  "input": {
+    "Word": "weiblich / männlich",
+      "day": "1",
+      "germansentences": ["5"],
+      "englishsentences": ["5"],
+      "french_word": "6"
+  }
+}

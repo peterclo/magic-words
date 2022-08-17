@@ -1,0 +1,10 @@
+mutation {
+  createFrenchWord(data: { Translation: "Traduction française" }) {
+    data {
+      id
+      attributes {
+        Translation
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+query {
+  germanWord(id: 1) {
+    data {
+      id
+      attributes {
+        Word
+        germansentences {
+          data {
+            attributes {
+              Sentence
+            }
+          }
+        }
+        englishsentences {
+          data {
+            attributes {
+              Sentence
+            }
+          }
+        }
+      }
+    }
+  }
+}

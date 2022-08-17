@@ -1,0 +1,10 @@
+mutation {
+  createEnglishsentence(data: { Sentence: "Nouvelle phrase en anglais" }) {
+    data {
+      id
+      attributes {
+        Sentence
+      }
+    }
+  }
+}

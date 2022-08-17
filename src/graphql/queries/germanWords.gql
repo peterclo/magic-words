@@ -1,0 +1,37 @@
+query {
+  germanWords(pagination: { limit: 100 }) {
+    data {
+      attributes {
+        Word
+      }
+    }
+  }
+  frenchWords(pagination: { limit: 100 }) {
+    data {
+      attributes {
+        Translation
+      }
+    }
+  }
+  sentences(pagination: { limit: 100 }) {
+    data {
+      attributes {
+        Sentence
+      }
+    }
+  }
+  englishsentences(pagination: { limit: 100 }) {
+    data {
+      attributes {
+        Sentence
+      }
+    }
+  }
+  frenchsentences(pagination: { limit: 100 }) {
+    data {
+      attributes {
+        Sentence
+      }
+    }
+  }
+}

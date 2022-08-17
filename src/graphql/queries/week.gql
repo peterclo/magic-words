@@ -1,0 +1,16 @@
+query {
+  week(id: 1) {
+    data {
+      id
+      attributes {
+        days {
+          data {
+            attributes {
+              Day
+            }
+          }
+        }
+      }
+    }
+  }
+}

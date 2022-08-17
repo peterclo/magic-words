@@ -1,0 +1,10 @@
+mutation {
+  createDay(data: { Day: 2 }) {
+    data {
+      id
+      attributes {
+        Day
+      }
+    }
+  }
+}
