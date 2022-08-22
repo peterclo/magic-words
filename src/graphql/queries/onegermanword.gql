@@ -29,3 +29,25 @@ query {
     }
   }
 }
+
+Version avec Query variables :
+
+query ($id:ID!) {
+  germanWord(id: $id) {
+    data {
+      id
+      attributes {
+        Word
+        french_word {data{attributes{Translation}}}
+        germansentences {data{attributes{Sentence}}}
+        englishsentences {data{attributes{Sentence}}}
+      }
+    }
+  }
+}
+
+Query variables :
+
+{
+  "id": 33
+}
