@@ -1,0 +1,31 @@
+query {
+  french_word(id: 33) {
+    data {
+      id
+      attributes {
+        Translation
+        germanword {
+          data {
+            attributes {
+              Word
+            }
+          }
+        }
+        germansentences {
+          data {
+            attributes {
+              Sentence
+            }
+          }
+        }
+        englishsentences {
+          data {
+            attributes {
+              Sentence
+            }
+          }
+        }
+      }
+    }
+  }
+}

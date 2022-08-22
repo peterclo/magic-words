@@ -3,6 +3,10 @@ Application autour des listes de mots d'allemand préparées par Minouchette
 Sources à retrouver sur Google Drive / Education / Allemand
 Fichiers word copiés sur Downloads
 
+Pour connaître les différents commits déjà effectués, dans un terminal taper :
+    git log --oneline
+Rechercher les émojis sur https://gitmoji.dev/. 
+
 
 # Nuxt 3 Minimal Starter
 

@@ -1,9 +1,16 @@
 query {
-  germanWord(id: 1) {
+  germanWord(id: 33) {
     data {
       id
       attributes {
         Word
+        french_word {
+          data {
+            attributes {
+              Translation
+            }
+          }
+        }
         germansentences {
           data {
             attributes {
@@ -11,7 +18,6 @@ query {
             }
           }
         }
-
         englishsentences {
           data {
             attributes {

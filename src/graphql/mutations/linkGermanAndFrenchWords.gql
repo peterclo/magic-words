@@ -1,0 +1,44 @@
+mutation {
+  updateGermanWord(id: "2", data: { french_word: "2" }) {
+    data {
+      id
+      attributes {
+        french_word {
+          data {
+            id
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Version avec les Query variables :
+
+mutation ($id: ID!, $input: GermanWordInput!) {
+  updateGermanWord(
+    id: $id,
+    data: $input
+  ) {
+    data {
+      id
+      attributes {
+        french_word {
+          data {
+            id
+          }
+        }
+      }
+    }
+  }
+}
+
+Query variables :
+
+{
+  "id": "8",
+  "input": {
+    "french_word": 4
+  }
+}
