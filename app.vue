@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { stringify } from "querystring";
-import { ref } from "vue";
+import DisplayWord1 from "./components/DisplayWord.vue";
+//import { ref } from "vue"; (pas nécessaire car auto-importé par NUXT 3)
 
 const graphql = useStrapiGraphQL();
 
@@ -106,7 +107,7 @@ interface StrapiResponseOneGW {
 //  console.log(error);
 //}
 
-let responseOneGW: StrapiResponseOneGW = await graphql(queryOneGermanWord, { id: "42" });
+let responseOneGW: StrapiResponseOneGW = await graphql(queryOneGermanWord, { id: "1" });
 //      Déclaration des variables issues de la déstructuration de l'objet responseOneGW
 const germanWord = responseOneGW.data.germanWord.data.attributes.Word;
 const englishSentence =
@@ -139,6 +140,7 @@ const items = ref([
 </script>
 
 <template>
+  <!--<NuxtLayout>-->
   <v-layout>
     <v-app-bar color="primary" prominent>
       <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -156,15 +158,14 @@ const items = ref([
     </v-navigation-drawer>
 
     <v-main>
-      <v-card class="mx-auto" max-width="500">
-        <v-card-title>{{ frenchWord }}</v-card-title>
-        <v-card-subtitle>{{
-          //responseGWs.data.germanWords.data[3].attributes.Word
-          germanWord
-        }}</v-card-subtitle>
-        <v-card-text height="300px">{{ englishSentence }}</v-card-text>
-        <v-card-text height="300px">{{ germanSentence }}</v-card-text>
-      </v-card>
+      <display-word
+        :french-word="frenchWord"
+        :german-word="germanWord"
+        :english-sentence="englishSentence"
+        :german-sentence="germanSentence"
+      ></display-word>
     </v-main>
   </v-layout>
+  <!--<NuxtPage />-->
+  <!--</NuxtLayout>-->
 </template>
